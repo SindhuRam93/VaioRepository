@@ -31,9 +31,9 @@ public class WebDriverWaitDemo {
 		
 		//dynamic wait
 		WebDriverWait wait =new WebDriverWait(driver, 10);
-		WebElement ele2 =driver.findElementByXPath("//span[text()='Apple']");
-		wait.until(ExpectedConditions.elementToBeClickable(ele2));
-		ele2.click();
+		WebElement ele3 =driver.findElementByXPath("//span[text()='Apple']");
+		wait.until(ExpectedConditions.elementToBeClickable(ele3));
+		ele3.click();
 	}
 
 }
