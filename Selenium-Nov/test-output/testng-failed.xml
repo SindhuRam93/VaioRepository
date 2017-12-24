@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="Uname" value="DemoSalesManager"/>
+  <parameter name="PSW" value="crmsfa"/>
+  <parameter name="URL" value="http://leaftaps.com/opentaps"/>
+  <parameter name="Browser" value="chrome"/>
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="common"/>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.CreateLeadWD">
+        <methods>
+          <include name="close"/>
+          <include name="createLead"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- testCases.CreateLeadWD -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
