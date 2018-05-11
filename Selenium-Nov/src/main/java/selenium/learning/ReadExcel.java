@@ -1,7 +1,9 @@
 package selenium.learning;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Scanner;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -16,12 +18,17 @@ import org.testng.annotations.Test;
 
 public class ReadExcel {
 
-	
+	String dataSheetName;
 	public void excelReadData() throws InvalidFormatException, IOException{
-	File excel = new File("./data/CreateLead.xlsx");
+	
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the data sheet name");
+		
+		dataSheetName= scan.next();
+		FileInputStream fis = new FileInputStream("F:\\ExcelData\\"+dataSheetName+".xlsx");
 	
 	// open the workbook
-	   XSSFWorkbook workBook = new XSSFWorkbook(excel);
+	   XSSFWorkbook workBook = new XSSFWorkbook(fis);
 	   
 	 // open the sheet
 	     XSSFSheet sheet = workBook.getSheetAt(0);
@@ -38,7 +45,7 @@ public class ReadExcel {
 	     
 	     for (int i = 1; i <= rowCount; i++) {
 			XSSFRow row = sheet.getRow(i);
-			System.out.println("\t");
+			
 			for (int j = 0; j < columnCount; j++) {
 				XSSFCell cell = row.getCell(j);
 				String data = cell.getStringCellValue();

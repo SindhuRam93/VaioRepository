@@ -14,10 +14,11 @@ public class ReportGeneration {
 	public void sampleReports() {
 		
 		// define the location of a report
-		ExtentReports report = new ExtentReports("./reports/sampleReport.html",false);
+		ExtentReports report = new ExtentReports("F:\\Selenium\\Selenium -Nov 17\\sampleReport.html",false);
 		
 		report.assignProject("Test Leaf Project");
 		report.loadConfig(new File("./LoadConfig.xml"));
+		
 	ExtentTest test=report.startTest("CreateLead", "Create a new lead");
 	//assign the author and category
 	test.assignAuthor("Sindhu");

@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.EditLeadWD">
+      <class name="grid.Leaftaps">
         <methods>
-          <include name="close"/>
           <include name="login"/>
-          <include name="EditLead"/>
         </methods>
-      </class> <!-- testCases.EditLeadWD -->
+      </class> <!-- grid.Leaftaps -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
